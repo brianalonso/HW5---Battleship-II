@@ -2,20 +2,26 @@
 //  BDAAppDelegate.m
 //  HW5 - Battleship
 //
-//  Created by Brian Alonso on 2/26/13.
+//  Created by Brian Alonso on 2/16/13.
 //  Copyright (c) 2013 Brian Alonso. All rights reserved.
 //
 
 #import "BDAAppDelegate.h"
 
+#import "BDAViewController.h"
+
 @implementation BDAAppDelegate
+
+@synthesize gameModel;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.viewController = [[BDAViewController alloc] initWithNibName:@"BDAViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

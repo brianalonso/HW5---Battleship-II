@@ -12,10 +12,24 @@
 		161025FC16DDB9D100BA3557 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161025FB16DDB9D100BA3557 /* CoreGraphics.framework */; };
 		1610260216DDB9D100BA3557 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1610260016DDB9D100BA3557 /* InfoPlist.strings */; };
 		1610260416DDB9D100BA3557 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610260316DDB9D100BA3557 /* main.m */; };
-		1610260816DDB9D100BA3557 /* BDAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610260716DDB9D100BA3557 /* BDAAppDelegate.m */; };
 		1610260A16DDB9D200BA3557 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1610260916DDB9D200BA3557 /* Default.png */; };
 		1610260C16DDB9D200BA3557 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1610260B16DDB9D200BA3557 /* Default@2x.png */; };
 		1610260E16DDB9D200BA3557 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1610260D16DDB9D200BA3557 /* Default-568h@2x.png */; };
+		1610262C16DDB9E500BA3557 /* BDAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610261C16DDB9E500BA3557 /* BDAAppDelegate.m */; };
+		1610262D16DDB9E500BA3557 /* BDAShipController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610261E16DDB9E500BA3557 /* BDAShipController.m */; };
+		1610262E16DDB9E500BA3557 /* BDAGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610262116DDB9E500BA3557 /* BDAGameModel.m */; };
+		1610262F16DDB9E500BA3557 /* BDASectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610262316DDB9E500BA3557 /* BDASectorView.m */; };
+		1610263016DDB9E500BA3557 /* BDAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1610262516DDB9E500BA3557 /* BDAViewController.m */; };
+		16BB095516E033E100DA4E2C /* BDADataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BB095416E033E100DA4E2C /* BDADataStore.m */; };
+		16C437E816DDD31F00B05F24 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437E016DDD31F00B05F24 /* Icon-72.png */; };
+		16C437E916DDD31F00B05F24 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437E116DDD31F00B05F24 /* Icon-72@2x.png */; };
+		16C437EA16DDD31F00B05F24 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437E216DDD31F00B05F24 /* Icon-Small-50.png */; };
+		16C437EB16DDD31F00B05F24 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437E316DDD31F00B05F24 /* Icon-Small-50@2x.png */; };
+		16C437EC16DDD31F00B05F24 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437E416DDD31F00B05F24 /* Icon-Small.png */; };
+		16C437ED16DDD31F00B05F24 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437E516DDD31F00B05F24 /* Icon-Small@2x.png */; };
+		16C437F116DDD33400B05F24 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437F016DDD33300B05F24 /* Icon.png */; };
+		16C437F316DDD33900B05F24 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437F216DDD33900B05F24 /* Icon@2x.png */; };
+		16ED06F516DDCEE4000550A8 /* BDAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16ED06F416DDCEE4000550A8 /* BDAViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +41,31 @@
 		1610260116DDB9D100BA3557 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1610260316DDB9D100BA3557 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1610260516DDB9D100BA3557 /* HW5 - Battleship-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HW5 - Battleship-Prefix.pch"; sourceTree = "<group>"; };
-		1610260616DDB9D100BA3557 /* BDAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDAAppDelegate.h; sourceTree = "<group>"; };
-		1610260716DDB9D100BA3557 /* BDAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDAAppDelegate.m; sourceTree = "<group>"; };
 		1610260916DDB9D200BA3557 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1610260B16DDB9D200BA3557 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1610260D16DDB9D200BA3557 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1610261B16DDB9E500BA3557 /* BDAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDAAppDelegate.h; path = ../BDAAppDelegate.h; sourceTree = "<group>"; };
+		1610261C16DDB9E500BA3557 /* BDAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDAAppDelegate.m; path = ../BDAAppDelegate.m; sourceTree = "<group>"; };
+		1610261D16DDB9E500BA3557 /* BDAShipController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDAShipController.h; path = ../BDAShipController.h; sourceTree = "<group>"; };
+		1610261E16DDB9E500BA3557 /* BDAShipController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDAShipController.m; path = ../BDAShipController.m; sourceTree = "<group>"; };
+		1610261F16DDB9E500BA3557 /* BDAGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDAGlobals.h; path = ../BDAGlobals.h; sourceTree = "<group>"; };
+		1610262016DDB9E500BA3557 /* BDAGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDAGameModel.h; path = ../BDAGameModel.h; sourceTree = "<group>"; };
+		1610262116DDB9E500BA3557 /* BDAGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDAGameModel.m; path = ../BDAGameModel.m; sourceTree = "<group>"; };
+		1610262216DDB9E500BA3557 /* BDASectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDASectorView.h; path = ../BDASectorView.h; sourceTree = "<group>"; };
+		1610262316DDB9E500BA3557 /* BDASectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDASectorView.m; path = ../BDASectorView.m; sourceTree = "<group>"; };
+		1610262416DDB9E500BA3557 /* BDAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDAViewController.h; path = ../BDAViewController.h; sourceTree = "<group>"; };
+		1610262516DDB9E500BA3557 /* BDAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDAViewController.m; path = ../BDAViewController.m; sourceTree = "<group>"; };
+		16BB095316E033E100DA4E2C /* BDADataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDADataStore.h; sourceTree = "<group>"; };
+		16BB095416E033E100DA4E2C /* BDADataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDADataStore.m; sourceTree = "<group>"; };
+		16C437E016DDD31F00B05F24 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		16C437E116DDD31F00B05F24 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		16C437E216DDD31F00B05F24 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		16C437E316DDD31F00B05F24 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		16C437E416DDD31F00B05F24 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		16C437E516DDD31F00B05F24 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		16C437F016DDD33300B05F24 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
+		16C437F216DDD33900B05F24 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
+		16ED06F416DDCEE4000550A8 /* BDAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDAViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +112,10 @@
 		161025FD16DDB9D100BA3557 /* HW5 - Battleship */ = {
 			isa = PBXGroup;
 			children = (
-				1610260616DDB9D100BA3557 /* BDAAppDelegate.h */,
-				1610260716DDB9D100BA3557 /* BDAAppDelegate.m */,
+				1610263316DDBBEF00BA3557 /* Views */,
+				1610263416DDBBF900BA3557 /* Delegate */,
+				1610263516DDBC0500BA3557 /* Model */,
+				1610263616DDBC1700BA3557 /* ViewController */,
 				161025FE16DDB9D100BA3557 /* Supporting Files */,
 			);
 			path = "HW5 - Battleship";
@@ -88,6 +124,7 @@
 		161025FE16DDB9D100BA3557 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16C437DF16DDD31F00B05F24 /* Battleship */,
 				161025FF16DDB9D100BA3557 /* HW5 - Battleship-Info.plist */,
 				1610260016DDB9D100BA3557 /* InfoPlist.strings */,
 				1610260316DDB9D100BA3557 /* main.m */,
@@ -97,6 +134,63 @@
 				1610260D16DDB9D200BA3557 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1610263316DDBBEF00BA3557 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16ED06F416DDCEE4000550A8 /* BDAViewController.xib */,
+				1610262216DDB9E500BA3557 /* BDASectorView.h */,
+				1610262316DDB9E500BA3557 /* BDASectorView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1610263416DDBBF900BA3557 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1610261B16DDB9E500BA3557 /* BDAAppDelegate.h */,
+				1610261C16DDB9E500BA3557 /* BDAAppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		1610263516DDBC0500BA3557 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1610261F16DDB9E500BA3557 /* BDAGlobals.h */,
+				1610262016DDB9E500BA3557 /* BDAGameModel.h */,
+				1610262116DDB9E500BA3557 /* BDAGameModel.m */,
+				16BB095316E033E100DA4E2C /* BDADataStore.h */,
+				16BB095416E033E100DA4E2C /* BDADataStore.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1610263616DDBC1700BA3557 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1610261D16DDB9E500BA3557 /* BDAShipController.h */,
+				1610261E16DDB9E500BA3557 /* BDAShipController.m */,
+				1610262416DDB9E500BA3557 /* BDAViewController.h */,
+				1610262516DDB9E500BA3557 /* BDAViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		16C437DF16DDD31F00B05F24 /* Battleship */ = {
+			isa = PBXGroup;
+			children = (
+				16C437F216DDD33900B05F24 /* Icon@2x.png */,
+				16C437F016DDD33300B05F24 /* Icon.png */,
+				16C437E016DDD31F00B05F24 /* Icon-72.png */,
+				16C437E116DDD31F00B05F24 /* Icon-72@2x.png */,
+				16C437E216DDD31F00B05F24 /* Icon-Small-50.png */,
+				16C437E316DDD31F00B05F24 /* Icon-Small-50@2x.png */,
+				16C437E416DDD31F00B05F24 /* Icon-Small.png */,
+				16C437E516DDD31F00B05F24 /* Icon-Small@2x.png */,
+			);
+			path = Battleship;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +249,15 @@
 				1610260A16DDB9D200BA3557 /* Default.png in Resources */,
 				1610260C16DDB9D200BA3557 /* Default@2x.png in Resources */,
 				1610260E16DDB9D200BA3557 /* Default-568h@2x.png in Resources */,
+				16ED06F516DDCEE4000550A8 /* BDAViewController.xib in Resources */,
+				16C437E816DDD31F00B05F24 /* Icon-72.png in Resources */,
+				16C437E916DDD31F00B05F24 /* Icon-72@2x.png in Resources */,
+				16C437EA16DDD31F00B05F24 /* Icon-Small-50.png in Resources */,
+				16C437EB16DDD31F00B05F24 /* Icon-Small-50@2x.png in Resources */,
+				16C437EC16DDD31F00B05F24 /* Icon-Small.png in Resources */,
+				16C437ED16DDD31F00B05F24 /* Icon-Small@2x.png in Resources */,
+				16C437F116DDD33400B05F24 /* Icon.png in Resources */,
+				16C437F316DDD33900B05F24 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +269,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1610260416DDB9D100BA3557 /* main.m in Sources */,
-				1610260816DDB9D100BA3557 /* BDAAppDelegate.m in Sources */,
+				1610262C16DDB9E500BA3557 /* BDAAppDelegate.m in Sources */,
+				1610262D16DDB9E500BA3557 /* BDAShipController.m in Sources */,
+				1610262E16DDB9E500BA3557 /* BDAGameModel.m in Sources */,
+				1610262F16DDB9E500BA3557 /* BDASectorView.m in Sources */,
+				1610263016DDB9E500BA3557 /* BDAViewController.m in Sources */,
+				16BB095516E033E100DA4E2C /* BDADataStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +389,7 @@
 				1610261316DDB9D200BA3557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

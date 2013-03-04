@@ -29,6 +29,9 @@
 		16C437ED16DDD31F00B05F24 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437E516DDD31F00B05F24 /* Icon-Small@2x.png */; };
 		16C437F116DDD33400B05F24 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437F016DDD33300B05F24 /* Icon.png */; };
 		16C437F316DDD33900B05F24 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16C437F216DDD33900B05F24 /* Icon@2x.png */; };
+		16E71B2016E460F700863E78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E71B1F16E460F700863E78 /* AVFoundation.framework */; };
+		16E71B2516E4678300863E78 /* 0.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 16E71B2416E4678300863E78 /* 0.aiff */; };
+		16E71B2716E468CD00863E78 /* click.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 16E71B2616E468CD00863E78 /* click.aiff */; };
 		16ED06F516DDCEE4000550A8 /* BDAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16ED06F416DDCEE4000550A8 /* BDAViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,10 @@
 		16C437E516DDD31F00B05F24 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		16C437F016DDD33300B05F24 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../../Icon.png; sourceTree = "<group>"; };
 		16C437F216DDD33900B05F24 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
+		16E71B1F16E460F700863E78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		16E71B2116E4632D00863E78 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		16E71B2416E4678300863E78 /* 0.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = 0.aiff; sourceTree = "<group>"; };
+		16E71B2616E468CD00863E78 /* click.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = click.aiff; sourceTree = "<group>"; };
 		16ED06F416DDCEE4000550A8 /* BDAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDAViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E71B2016E460F700863E78 /* AVFoundation.framework in Frameworks */,
 				161025F816DDB9D100BA3557 /* UIKit.framework in Frameworks */,
 				161025FA16DDB9D100BA3557 /* Foundation.framework in Frameworks */,
 				161025FC16DDB9D100BA3557 /* CoreGraphics.framework in Frameworks */,
@@ -102,6 +110,8 @@
 		161025F616DDB9D100BA3557 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16E71B2116E4632D00863E78 /* AudioToolbox.framework */,
+				16E71B1F16E460F700863E78 /* AVFoundation.framework */,
 				161025F716DDB9D100BA3557 /* UIKit.framework */,
 				161025F916DDB9D100BA3557 /* Foundation.framework */,
 				161025FB16DDB9D100BA3557 /* CoreGraphics.framework */,
@@ -112,6 +122,7 @@
 		161025FD16DDB9D100BA3557 /* HW5 - Battleship */ = {
 			isa = PBXGroup;
 			children = (
+				16E71B1C16E45E7100863E78 /* Sounds */,
 				1610263316DDBBEF00BA3557 /* Views */,
 				1610263416DDBBF900BA3557 /* Delegate */,
 				1610263516DDBC0500BA3557 /* Model */,
@@ -193,6 +204,15 @@
 			path = Battleship;
 			sourceTree = "<group>";
 		};
+		16E71B1C16E45E7100863E78 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				16E71B2616E468CD00863E78 /* click.aiff */,
+				16E71B2416E4678300863E78 /* 0.aiff */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,6 +278,8 @@
 				16C437ED16DDD31F00B05F24 /* Icon-Small@2x.png in Resources */,
 				16C437F116DDD33400B05F24 /* Icon.png in Resources */,
 				16C437F316DDD33900B05F24 /* Icon@2x.png in Resources */,
+				16E71B2516E4678300863E78 /* 0.aiff in Resources */,
+				16E71B2716E468CD00863E78 /* click.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

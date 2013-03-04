@@ -11,6 +11,7 @@
 #import "BDAAppDelegate.h"
 #import "BDAGlobals.h"
 #import "BDAViewController.h"
+#import <AVFoundation/AVAudioPlayer.h>
 
 #define DEFAULT_RADIUS 3.0
 
@@ -32,6 +33,7 @@
     CGFloat rotation;
     CGFloat degrees;
     UIAlertView *alert;
+    AVAudioPlayer *clickPlayer;
 }
 @synthesize boatStartX, boatStartY, boatType, delegate, lastSector, rotated;
 
@@ -73,6 +75,9 @@
         [self.tapGesture setNumberOfTapsRequired:1];
         [self addGestureRecognizer:self.tapGesture];
 
+        // setup the sound
+        [self _setupSound];
+        
         // Draw the rounded rectangle for the ship
         [self setNeedsDisplayInRect:frame];
     }
@@ -108,6 +113,26 @@
     CGContextClosePath(context);
     // Fill & stroke the path
     CGContextDrawPath(context, kCGPathFillStroke);
+}
+
+#pragma mark - Sound setup
+- (void) _setupSound
+{
+    // Play a sound
+    NSURL *clickSoundURL = [NSURL fileURLWithPath: [[NSBundle mainBundle]
+                                                    pathForResource: @"click"
+                                                    ofType: @"aiff"]];
+    clickPlayer = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:clickSoundURL
+                   error:nil];
+    
+    // Prepare to play sounds
+    [clickPlayer prepareToPlay];
+}
+
+- (void) _playClick {
+    [clickPlayer play];
+    
 }
 
 #pragma mark - Gesture recognizers
@@ -175,7 +200,19 @@
                                    self.center.y + (translation.y - currentPoint.y));
     
     // Stay within the bounds of the sector board of the game
-    float midPointX = CGRectGetMidX(self.bounds);
+    float midPointX = 0.0;
+    float midPointY = 0.0;
+    if (self.rotated) {
+        // Ship piece is rotated; swap X and Y
+        midPointY = CGRectGetMidX(self.bounds);
+        midPointX = CGRectGetMidY(self.bounds);
+    }
+    else
+    {
+        // Ship piece is horizontal
+        midPointX = CGRectGetMidX(self.bounds);
+        midPointY = CGRectGetMidY(self.bounds);
+    }
     
     // Check if trying to drag off of the right screen boundary
     if (newPoint.x > self.superview.bounds.size.width  - midPointX - XPAD)
@@ -183,8 +220,6 @@
     else if (newPoint.x < midPointX)
         // Dont allow drag past left edge of screen
         newPoint.x = midPointX;
-    
-    float midPointY = CGRectGetMidY(self.bounds);
     
     // Check if trying to drag off the bottom of the screen (superview)
     if (newPoint.y > self.superview.bounds.size.height  - midPointY - YPAD)
@@ -230,7 +265,6 @@
         
         if(CGRectIsNull(intersection)) {
             // Didn't find a grid sector.  The piece was moved off the playing grid
-            
         }
         else
         {
@@ -261,15 +295,22 @@
                             break;
                     }
                
-                yValue = YPAD + (BLOCK_WIDTH * (sector.colNumber-1)) + offset;
-                xValue = XPAD + (sector.rowNumber * BLOCK_HEIGHT) - (BLOCK_WIDTH/2);
+                    yValue = YPAD + (BLOCK_HEIGHT * (sector.rowNumber-1)) + offset;
+                    
+                    // Make sure the ship is within the vertical bounds of the board
+                    if (yValue + offset > (YPAD + (BLOCK_HEIGHT * 5)))
+                        yValue -= BLOCK_HEIGHT;
+                    xValue = XPAD + (sector.colNumber * BLOCK_WIDTH) - (BLOCK_WIDTH/2);
                 }
                 else
                 {
                     // Ship piece is horizontal
                     if (self.boatType == typeCommandShip)
                         offset = BLOCK_WIDTH/2;
+                    
                     xValue = XPAD + (BLOCK_WIDTH * (sector.colNumber-1)) + offset;
+                    if (xValue - XPAD <= 0)
+                        xValue += BLOCK_WIDTH;
                     yValue = YPAD + (sector.rowNumber * BLOCK_HEIGHT) + (BLOCK_HEIGHT/2);
                 }
                 
@@ -312,6 +353,8 @@
                     {
                         // The ship piece has been correctly placed
                         self.piecePlaced = YES;
+                        
+                        [self _playClick];
                         
                         // Save the ship frame location for the next move
                         switch (self.boatType) {

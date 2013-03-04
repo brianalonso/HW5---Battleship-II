@@ -12,6 +12,7 @@
 #import "BDAShipController.h"
 #import "BDAGlobals.h"
 #import "BDADataStore.h"
+#import <AVFoundation/AVAudioPlayer.h>
 
 @interface BDAViewController ()
 // Outlets
@@ -29,6 +30,7 @@
     // Define reference to a global game piece array
     BDAAppDelegate *appDelegate;
     BDASectorView *lastSector;
+    AVAudioPlayer *clickPlayer;
 }
 
 #pragma mark - View lifecycle
@@ -126,6 +128,17 @@
                                      selector:@selector(applicationWillResignActive:)
                                      name:UIApplicationWillResignActiveNotification
                                      object:app];
+    
+    // Play a sound
+    NSURL *clickSoundURL = [NSURL fileURLWithPath: [[NSBundle mainBundle]
+                                                    pathForResource: @"0"
+                                                    ofType: @"aiff"]];
+    clickPlayer = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:clickSoundURL
+                   error:nil];
+    
+    // Prepare to play sounds
+    [clickPlayer prepareToPlay];
 }
 
 #pragma mark Encoding/Decoding
@@ -324,10 +337,18 @@
             // Set the button to Begin Game
             [[self buttonStart] setTitle:@"Begin Game" forState:UIControlStateNormal];
         }];
+        
+        // Play a click sound
+        [self _playClick];
     }
     
     // Archive game information
     [self _archiveData];
+}
+
+- (void) _playClick {
+    [clickPlayer play];
+
 }
 
 #pragma mark Constraints
